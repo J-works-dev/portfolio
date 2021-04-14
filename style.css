@@ -10,9 +10,10 @@
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
+  --color-green: #0c660c;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
-  --color-black: #000000;
+  --color-black: #111111;
 
   /* Font size */
   --font-large: 48px;
@@ -93,7 +94,7 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: var(--color-black);
   align-items: center;
   color: var(--color-white);
   padding: 16px;
@@ -120,7 +121,7 @@ p {
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-green);
 }
 
 .navbar__toggle-btn {
@@ -176,7 +177,7 @@ p {
 /* About */
 .about__majors {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 80px 0;
 }
 
@@ -197,7 +198,7 @@ p {
 }
 
 .major__icon:hover i {
-  color: var(--color-pink);
+  color: var(--color-green);
   transform: rotate(-30deg) scale(1.1);
 }
 
@@ -221,7 +222,7 @@ p {
 }
 
 .job__icon {
-  color: var(--color-dark-grey);
+  color: var(--color-blue);
   font-size: var(--font-medium);
 }
 
@@ -241,7 +242,7 @@ p {
 /* Skill */
 
 #skills {
-  background-color: var(--color-yellow);
+  background-color: var(--color-light-white);
 }
 
 .skillset {
@@ -309,7 +310,7 @@ p {
 
 .category__btn.active,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-blue);
   color: var(--color-white);
 }
 
@@ -444,7 +445,7 @@ p {
 
 /* Contact */
 #contact {
-  background-color: var(--color-dark-grey);
+  background-color: var(--color-black);
 }
 
 .contact__title,
@@ -465,7 +466,7 @@ p {
 
 .contact__link i:hover {
   transform: scale(1.2);
-  color: var(--color-orange);
+  color: var(--color-green);
 }
 
 /* For below 768px screen width */
