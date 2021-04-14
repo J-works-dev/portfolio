@@ -322,7 +322,7 @@ p {
   top: -20px;
   left: 4px;
   opacity: 0;
-  transition: all var(--animation-duration);
+  transition: all var(--animation-duration) ease-in;
 }
 
 .work__projects {
@@ -358,8 +358,8 @@ p {
   top: 0;
   left: 0;
   opacity: 0;
-  transform: translateY(15px);
-  transition: all var(--animation-duration);
+  transform: translateY(10px);
+  transition: all var(--animation-duration) ease-in;
 }
 
 .project:hover .project__description {
@@ -430,4 +430,30 @@ p {
 
 .testimonial__speech-bubble a {
   color: var(--color-blue);
+}
+
+/* Contact */
+#contact {
+  background-color: var(--color-dark-grey);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+
+.contact__link {
+  font-size: var(--font-large);
+  margin: 24px 0;
+  transition: all var(--animation-duration) ease-in;
+}
+
+.contact__link i:hover {
+  transform: scale(1.2);
+  color: var(--color-orange);
 }
