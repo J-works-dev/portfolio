@@ -389,6 +389,7 @@ p {
   opacity: 0;
   transform: translateY(10px);
   transition: all var(--animation-duration) ease-in;
+  color: var(--color-light-grey);
 }
 
 .project:hover .project__description {
@@ -405,9 +406,9 @@ p {
   display: block;
   position: relative;
   left: 50%;
-  width: 25px;
-  height: 2px;
-  margin-left: -12px;
+  width: 70px;
+  height: 1px;
+  transform: translateX(-50%);
   margin-top: 8px;
   background-color: var(--color-white);
 }
@@ -514,6 +515,12 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-black);
+    z-index: 1;
+  }
+
+  #navbar.navbar--dark {
+    padding: 16px;
   }
 
   .navbar__menu {
@@ -521,6 +528,10 @@ p {
     text-align: center;
     width: 100%;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 
   .about__majors {
