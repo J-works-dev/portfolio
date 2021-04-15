@@ -170,6 +170,10 @@ p {
   border-radius: var(--size-border-radius);
 }
 
+.home__contact:hover {
+  background-color: var(--color-green);
+}
+
 /* Section common */
 .section {
   padding: 50px;
@@ -315,6 +319,8 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  margin: 5px;
+  position: relative;
 }
 
 .category__btn.selected,
@@ -326,7 +332,7 @@ p {
 .category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
-  top: 0;
+  right: 18px;
 }
 
 .category__count {
@@ -337,9 +343,8 @@ p {
   height: 24px;
   line-height: 24px;
   display: inline-block;
-  position: relative;
-  top: -20px;
-  left: 4px;
+  position: absolute;
+  right: 4px;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
 }
@@ -508,8 +513,19 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
+    top: 15px;
+    right: 16px;
   }
 
   #navbar {
@@ -534,28 +550,62 @@ p {
     display: block;
   }
 
+  .section {
+    padding: 16px;
+    padding-top: 40px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
 
   .skillset {
     flex-direction: column;
   }
 
+  .category__btn.selected .category__count,
+  .category__btn:hover .category__count {
+    right: 10px;
+  }
+
+  .category__btn {
+    padding: 10px 25px;
+    width: 62%;
+    margin: 5px;
+  }
+
   .project {
     flex-grow: 1;
+  }
+
+  .testimonial {
+    flex-direction: column;
   }
 
   .testimonial__avatar {
     width: 100px;
     height: 100px;
+    margin-top: -20px;
   }
 
   .testimonial__speech-bubble {
-    transform: translateY(30px);
+    transform: translateY(15px);
+    order: 1;
+  }
+
+  .testimonial:nth-child(even) {
+    align-items: flex-end;
+  }
+
+  .arrow-up {
+    font-size: 30px;
+    right: 16px;
+    bottom: 16px;
   }
 }
