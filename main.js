@@ -26,10 +26,6 @@ navbarMenu.addEventListener('click', (event) => {
 // Handle scrolling when click on the contact button
 const contactBtn = document.querySelector('.home__contact');
 contactBtn.addEventListener('click', (event) => {
-    const link = event.target.dataset.link;
-    if (link == null) {
-        return;
-    }
     scrollIntoView('#contact');
 })
 
@@ -40,7 +36,20 @@ document.addEventListener('scroll', () => {
     home.style.opacity = 0.9 - window.scrollY / homeHeight;
 })
 
+// Show "arrow up" button when scrolling down
+const arrowUp =  document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight) {
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');
+    }
+})
 
+// Handle click on the "arrow up" button
+arrowUp.addEventListener('click', () => {
+    scrollIntoView('#home');
+})
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
