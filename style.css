@@ -60,6 +60,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  padding: 0;
 }
 /* Typography */
 h1 {
@@ -101,12 +102,12 @@ p {
   color: var(--color-white);
   padding: 16px;
   transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 
 #navbar.navbar--dark {
   background-color: var(--color-black);
   padding: 8px 16px;
-  z-index: 1;
 }
 
 .navbar__menu {
@@ -124,6 +125,10 @@ p {
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
 }
 
 .navbar__menu__item:hover {
@@ -319,7 +324,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
-  margin: 5px;
+  margin: 5px 0;
   position: relative;
 }
 
