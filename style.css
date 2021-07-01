@@ -115,8 +115,14 @@ p {
 }
 
 .navbar__logo {
+  display: inline;
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+}
+
+.navbar__logo a {
+  font-size: 50px;
+  transform: translate(0, -10px);
 }
 
 .navbar__menu__item {
